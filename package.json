@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "lkt-i18n": "^1.1.0",
-    "lkt-vue-kernel": "^1.0.51",
+    "lkt-vue-kernel": "^1.0.57",
     "vue": "^3.3.0"
   }
 }
