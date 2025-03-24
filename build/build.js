@@ -11,10 +11,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     position: {},
     events: {}
   }, getDefaultValues(Icon)),
-  emits: [
-    "click"
-  ],
-  setup(__props, { emit: __emit }) {
+  setup(__props) {
     const slots = useSlots();
     const props = __props;
     const computedClassName = computed(() => {

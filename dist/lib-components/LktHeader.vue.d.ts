@@ -13,11 +13,7 @@ declare const __VLS_self: import("vue").DefineComponent<IconConfig, {
     slots: typeof slots;
     computedClassName: typeof computedClassName;
     computedComponent: typeof computedComponent;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    click: (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<IconConfig> & Readonly<{
-    onClick?: ((...args: any[]) => any) | undefined;
-}>, {
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<IconConfig> & Readonly<{}>, {
     type: import("lkt-vue-kernel").IconType;
     position: import("lkt-vue-kernel").IconPosition;
     text: string | number;
@@ -25,11 +21,7 @@ declare const __VLS_self: import("vue").DefineComponent<IconConfig, {
     icon: string | number;
     events: import("lkt-vue-kernel").EventsConfig;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const __VLS_component: import("vue").DefineComponent<IconConfig, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    click: (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<IconConfig> & Readonly<{
-    onClick?: ((...args: any[]) => any) | undefined;
-}>, {
+declare const __VLS_component: import("vue").DefineComponent<IconConfig, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<IconConfig> & Readonly<{}>, {
     type: import("lkt-vue-kernel").IconType;
     position: import("lkt-vue-kernel").IconPosition;
     text: string | number;
