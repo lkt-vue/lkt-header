@@ -1,0 +1,57 @@
+.lkt-header {
+    appearance: none;
+    display: var(--lkt-header--display);
+    flex-direction: var(--lkt-header--flex-direction);
+    align-items: var(--lkt-header--align-items);
+    justify-content: var(--lkt-header--justify-content);
+    gap: var(--lkt-header--gap);
+    padding: var(--lkt-header--padding);
+    min-width: var(--lkt-header--min-width);
+    max-width: var(--lkt-header--max-width);
+    width: var(--lkt-header--width);
+    min-height: var(--lkt-header--min-height);
+    max-height: var(--lkt-header--max-height);
+    height: var(--lkt-header--height);
+    background: var(--lkt-header--background);
+    border-radius: var(--lkt-header--border-radius);
+    border-width: var(--lkt-header--border-width);
+    border-style: var(--lkt-header--border-style);
+    border-color: var(--lkt-header--border-color);
+    font-size: var(--lkt-header--font-size);
+    font-weight: var(--lkt-header--font-weight);
+    color: var(--lkt-header--color);
+    text-align: var(--lkt-header--text-align);
+    transition: var(--lkt-header--transition);
+    margin: var(--lkt-header--margin);
+}
+
+.lkt-header i {
+    display: var(--lkt-header--icon--display);
+    align-items: var(--lkt-header--icon--align-items);
+    justify-content: var(--lkt-header--icon--justify-content);
+    transition: var(--lkt-header--transition);
+
+    padding: var(--lkt-header--icon--padding);
+    background: var(--lkt-header--icon--background);
+    border-radius: var(--lkt-header--icon--border-radius);
+    border-width: var(--lkt-header--icon--border-width);
+    border-style: var(--lkt-header--icon--border-style);
+    border-color: var(--lkt-header--icon--border-color);
+    font-size: var(--lkt-header--icon--font-size);
+    color: var(--lkt-header--icon--color);
+    margin: var(--lkt-header--icon--margin);
+    width: var(--lkt-header--icon--width);
+    height: var(--lkt-header--icon--height);
+}
+
+.lkt-header:hover {
+    background: var(--lkt-header--hover--background);
+    color: var(--lkt-header--hover--color);
+    border-color: var(--lkt-header--hover--border-color);
+}
+
+.lkt-header:hover i {
+    background: var(--lkt-header--hover--icon--background);
+    color: var(--lkt-header--hover--icon--color);
+    border-color: var(--lkt-header--hover--icon--border-color);
+}

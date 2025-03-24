@@ -1,0 +1,51 @@
+.lkt-header {
+    --lkt-header--align-items: center;
+    --lkt-header--background: transparent;
+    --lkt-header--border-color: transparent;
+    --lkt-header--border-radius: 0;
+    --lkt-header--border-style: solid;
+    --lkt-header--border-width: 0;
+    --lkt-header--color: #444444;
+    --lkt-header--display: inline-flex;
+    --lkt-header--flex-direction: column;
+    --lkt-header--font-size: 14px;
+    --lkt-header--font-weight: 400;
+    --lkt-header--gap: 15px;
+    --lkt-header--height: initial;
+    --lkt-header--justify-content: center;
+    --lkt-header--margin: 0;
+    --lkt-header--max-height: initial;
+    --lkt-header--max-width: initial;
+    --lkt-header--min-height: initial;
+    --lkt-header--min-width: initial;
+    --lkt-header--padding: 0;
+    --lkt-header--text-align: center;
+    --lkt-header--transition: all linear 300ms;
+    --lkt-header--width: initial;
+
+    /** Element: Icon */
+    --lkt-header--icon--align-items: center;
+    --lkt-header--icon--background: transparent;
+    --lkt-header--icon--border-color: transparent;
+    --lkt-header--icon--border-radius: 0;
+    --lkt-header--icon--border-style: solid;
+    --lkt-header--icon--border-width: 0;
+    --lkt-header--icon--color: #444444;
+    --lkt-header--icon--display: inline-flex;
+    --lkt-header--icon--font-size: 30px;
+    --lkt-header--icon--height: auto;
+    --lkt-header--icon--justify-content: center;
+    --lkt-header--icon--margin: 0;
+    --lkt-header--icon--padding: 0;
+    --lkt-header--icon--width: auto;
+
+    /** Event: Hover */
+    --lkt-header--hover--background: var(--lkt-header--background);
+    --lkt-header--hover--border-color: var(--lkt-header--border-color);
+    --lkt-header--hover--color: var(--lkt-header--color);
+
+    /** Element: Icon, Event: Hover */
+    --lkt-header--hover--icon--background: var(--lkt-header--icon--background);
+    --lkt-header--hover--icon--border-color: var(--lkt-header--icon--border-color);
+    --lkt-header--hover--icon--color: var(--lkt-header--icon--color);
+}
