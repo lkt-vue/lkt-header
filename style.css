@@ -25,33 +25,8 @@
     margin: var(--lkt-header--margin);
 }
 
-.lkt-header i {
-    display: var(--lkt-header--icon--display);
-    align-items: var(--lkt-header--icon--align-items);
-    justify-content: var(--lkt-header--icon--justify-content);
-    transition: var(--lkt-header--transition);
-
-    padding: var(--lkt-header--icon--padding);
-    background: var(--lkt-header--icon--background);
-    border-radius: var(--lkt-header--icon--border-radius);
-    border-width: var(--lkt-header--icon--border-width);
-    border-style: var(--lkt-header--icon--border-style);
-    border-color: var(--lkt-header--icon--border-color);
-    font-size: var(--lkt-header--icon--font-size);
-    color: var(--lkt-header--icon--color);
-    margin: var(--lkt-header--icon--margin);
-    width: var(--lkt-header--icon--width);
-    height: var(--lkt-header--icon--height);
-}
-
 .lkt-header:hover {
     background: var(--lkt-header--hover--background);
     color: var(--lkt-header--hover--color);
     border-color: var(--lkt-header--hover--border-color);
-}
-
-.lkt-header:hover i {
-    background: var(--lkt-header--hover--icon--background);
-    color: var(--lkt-header--hover--icon--color);
-    border-color: var(--lkt-header--hover--icon--border-color);
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, useSlots} from "vue";
-import {getDefaultValues, Header, HeaderConfig, HeaderTag, Icon, IconConfig} from "lkt-vue-kernel";
+import {getDefaultValues, Header, HeaderConfig, IconConfig} from "lkt-vue-kernel";
 
 const slots = useSlots();
 
@@ -16,8 +16,8 @@ const computedClassName = computed(() => {
     <header
         class="lkt-header"
         :class="computedClassName">
+        <lkt-icon v-if="icon" v-bind="<IconConfig>{icon}"/>
         <component :is="tag" class="lkt-header-main">
-            <i v-if="icon" :class="icon"/>
             <template v-if="slots.text">
                 <slot name="text"/>
             </template>
