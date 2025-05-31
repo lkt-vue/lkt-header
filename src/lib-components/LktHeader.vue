@@ -23,5 +23,9 @@ const computedClassName = computed(() => {
             </template>
             <span v-else-if="text" v-html="text"/>
         </component>
+
+        <template v-if="slots['web-element-actions']">
+            <slot name="web-element-actions"/>
+        </template>
     </header>
 </template>

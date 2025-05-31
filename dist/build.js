@@ -1,4 +1,4 @@
-import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeClass, createBlock, createCommentVNode, normalizeProps, mergeProps, resolveDynamicComponent, withCtx, renderSlot, unref } from "vue";
+import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeClass, createBlock, createCommentVNode, renderSlot, normalizeProps, mergeProps, resolveDynamicComponent, withCtx, unref } from "vue";
 import { getDefaultValues, Header } from "lkt-vue-kernel";
 const _hoisted_1 = ["innerHTML"];
 const _sfc_main = /* @__PURE__ */ defineComponent({
@@ -29,7 +29,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 8, _hoisted_1)) : createCommentVNode("", true)
           ]),
           _: 3
-        }))
+        })),
+        unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 1 }) : createCommentVNode("", true)
       ], 2);
     };
   }
