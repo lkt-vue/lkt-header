@@ -8,11 +8,13 @@
     --lkt-header--color: #444444;
     --lkt-header--display: inline-flex;
     --lkt-header--flex-direction: row;
+    --lkt-header--font-family: inherit;
     --lkt-header--font-size: 14px;
     --lkt-header--font-weight: 400;
     --lkt-header--gap: 15px;
     --lkt-header--height: initial;
     --lkt-header--justify-content: flex-start;
+    --lkt-header--line-height: inherit;
     --lkt-header--margin: 0;
     --lkt-header--max-height: initial;
     --lkt-header--max-width: initial;

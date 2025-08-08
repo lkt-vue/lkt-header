@@ -1,6 +1,5 @@
-import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeClass, createBlock, createCommentVNode, renderSlot, normalizeProps, mergeProps, resolveDynamicComponent, withCtx, unref } from "vue";
+import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeClass, createBlock, createCommentVNode, renderSlot, normalizeProps, mergeProps, unref, resolveDynamicComponent, withCtx } from "vue";
 import { getDefaultValues, Header } from "lkt-vue-kernel";
-const _hoisted_1 = ["innerHTML"];
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "LktHeader",
   props: /* @__PURE__ */ mergeDefaults({
@@ -13,7 +12,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const slots = useSlots();
     const props = __props;
     const computedClassName = computed(() => {
-      return props.class;
+      let r = [];
+      if (props.tag) r.push(`is-${props.tag}`);
+      if (props.class) r.push(props.class);
+      return r.join(" ");
     });
     return (_ctx, _cache) => {
       const _component_lkt_icon = resolveComponent("lkt-icon");
@@ -21,16 +23,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         class: normalizeClass(["lkt-header", computedClassName.value])
       }, [
         _ctx.icon ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 0 }, { icon: _ctx.icon })), null, 16)) : createCommentVNode("", true),
-        (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), { class: "lkt-header-main" }, {
+        unref(slots).text ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
+          key: 1,
+          class: "lkt-header-main"
+        }, {
           default: withCtx(() => [
-            unref(slots).text ? renderSlot(_ctx.$slots, "text", { key: 0 }) : _ctx.text ? (openBlock(), createElementBlock("span", {
-              key: 1,
-              innerHTML: _ctx.text
-            }, null, 8, _hoisted_1)) : createCommentVNode("", true)
+            renderSlot(_ctx.$slots, "text")
           ]),
           _: 3
-        })),
-        unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 1 }) : createCommentVNode("", true)
+        })) : _ctx.text ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
+          key: 2,
+          class: "lkt-header-main",
+          innerHTML: _ctx.text
+        }, null, 8, ["innerHTML"])) : createCommentVNode("", true),
+        unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 3 }) : createCommentVNode("", true)
       ], 2);
     };
   }

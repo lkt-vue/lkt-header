@@ -4,11 +4,11 @@ declare const slots: Readonly<{
 }>;
 declare const computedClassName: import("vue").ComputedRef<string>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_9: {}, __VLS_11: {};
+declare var __VLS_9: {}, __VLS_15: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
     text?: (props: typeof __VLS_9) => any;
 } & {
-    'web-element-actions'?: (props: typeof __VLS_11) => any;
+    'web-element-actions'?: (props: typeof __VLS_15) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<HeaderConfig, {
     slots: typeof slots;

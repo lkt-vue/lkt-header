@@ -7,7 +7,12 @@ const slots = useSlots();
 const props = withDefaults(defineProps<HeaderConfig>(), getDefaultValues(Header));
 
 const computedClassName = computed(() => {
-    return props.class;
+    let r = [];
+
+    if (props.tag) r.push(`is-${props.tag}`);
+    if (props.class) r.push(props.class);
+
+    return r.join(' ');
 });
 
 </script>
@@ -17,12 +22,10 @@ const computedClassName = computed(() => {
         class="lkt-header"
         :class="computedClassName">
         <lkt-icon v-if="icon" v-bind="<IconConfig>{icon}"/>
-        <component :is="tag" class="lkt-header-main">
-            <template v-if="slots.text">
-                <slot name="text"/>
-            </template>
-            <span v-else-if="text" v-html="text"/>
+        <component v-if="slots.text" :is="tag" class="lkt-header-main">
+            <slot name="text"/>
         </component>
+        <component v-else-if="text" :is="tag" class="lkt-header-main" v-html="text"/>
 
         <template v-if="slots['web-element-actions']">
             <slot name="web-element-actions"/>
