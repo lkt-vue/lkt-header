@@ -39,5 +39,8 @@
 .lkt-header h4,
 .lkt-header h5,
 .lkt-header h6 {
+    font-size: var(--lkt-header--font-size);
+    font-weight: var(--lkt-header--font-weight);
+    line-height: var(--lkt-header--line-height);
     margin: 0;
 }
