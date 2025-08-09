@@ -1,5 +1,5 @@
 .lkt-header {
-    --lkt-header--align-items: center;
+    --lkt-header--align-items: flex-start;
     --lkt-header--background: transparent;
     --lkt-header--border-color: transparent;
     --lkt-header--border-radius: 0;
@@ -7,7 +7,7 @@
     --lkt-header--border-width: 0;
     --lkt-header--color: #444444;
     --lkt-header--display: inline-flex;
-    --lkt-header--flex-direction: row;
+    --lkt-header--flex-direction: column;
     --lkt-header--font-family: inherit;
     --lkt-header--font-size: 14px;
     --lkt-header--font-weight: 400;
@@ -29,4 +29,14 @@
     --lkt-header--hover--background: var(--lkt-header--background);
     --lkt-header--hover--border-color: var(--lkt-header--border-color);
     --lkt-header--hover--color: var(--lkt-header--color);
+
+    /** Element: Top */
+    --lkt-header--top--align-items: center;
+    --lkt-header--top--display: flex;
+    --lkt-header--top--flex-direction: row;
+
+    /** Element: Bottom */
+    --lkt-header--bottom--align-items: center;
+    --lkt-header--bottom--display: flex;
+    --lkt-header--bottom--flex-direction: row;
 }

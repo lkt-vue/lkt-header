@@ -44,3 +44,15 @@
     line-height: var(--lkt-header--line-height);
     margin: 0;
 }
+
+.lkt-header--top {
+    align-items: var(--lkt-header--top--align-items);
+    display: var(--lkt-header--top--display);
+    flex-direction: var(--lkt-header--top--flex-direction);
+}
+
+.lkt-header--bottom {
+    align-items: var(--lkt-header--bottom--align-items);
+    display: var(--lkt-header--bottom--display);
+    flex-direction: var(--lkt-header--bottom--flex-direction);
+}
