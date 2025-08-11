@@ -14,6 +14,7 @@
     --lkt-header--gap: 15px;
     --lkt-header--height: initial;
     --lkt-header--justify-content: flex-start;
+    --lkt-header--letter-spacing: initial;
     --lkt-header--line-height: inherit;
     --lkt-header--margin: 0;
     --lkt-header--max-height: initial;
@@ -34,9 +35,11 @@
     --lkt-header--top--align-items: center;
     --lkt-header--top--display: flex;
     --lkt-header--top--flex-direction: row;
+    --lkt-header--top--gap: 0;
 
     /** Element: Bottom */
     --lkt-header--bottom--align-items: center;
     --lkt-header--bottom--display: flex;
     --lkt-header--bottom--flex-direction: row;
+    --lkt-header--bottom--gap: 0;
 }

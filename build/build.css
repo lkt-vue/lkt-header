@@ -15,6 +15,7 @@
     gap: var(--lkt-header--gap);
     height: var(--lkt-header--height);
     justify-content: var(--lkt-header--justify-content);
+    letter-spacing: var(--lkt-header--letter-spacing);
     line-height: var(--lkt-header--line-height);
     margin: var(--lkt-header--margin);
     max-height: var(--lkt-header--max-height);
@@ -49,10 +50,12 @@
     align-items: var(--lkt-header--top--align-items);
     display: var(--lkt-header--top--display);
     flex-direction: var(--lkt-header--top--flex-direction);
+    gap: var(--lkt-header--top--gap);
 }
 
 .lkt-header--bottom {
     align-items: var(--lkt-header--bottom--align-items);
     display: var(--lkt-header--bottom--display);
     flex-direction: var(--lkt-header--bottom--flex-direction);
+    gap: var(--lkt-header--bottom--gap);
 }
