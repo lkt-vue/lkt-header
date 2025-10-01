@@ -13,7 +13,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     text: {},
     icon: {},
     topStartButtons: {},
+    topStartContent: {},
     topEndButtons: {},
+    topEndContent: {},
     bottomButtons: {}
   }, getDefaultValues(Header)),
   setup(__props) {
@@ -26,8 +28,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return r.join(" ");
     });
     return (_ctx, _cache) => {
-      var _a, _b, _c, _d;
+      var _a, _b, _c, _d, _e, _f;
       const _component_lkt_button = resolveComponent("lkt-button");
+      const _component_lkt_polymorphic_element = resolveComponent("lkt-polymorphic-element");
       const _component_lkt_icon = resolveComponent("lkt-icon");
       return openBlock(), createElementBlock("div", {
         class: normalizeClass(["lkt-header", computedClassName.value])
@@ -36,9 +39,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           ((_a = _ctx.topStartButtons) == null ? void 0 : _a.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.topStartButtons, (btn) => {
             return openBlock(), createBlock(_component_lkt_button, mergeProps({ ref_for: true }, btn), null, 16);
           }), 256)) : createCommentVNode("", true),
-          _ctx.icon ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 1 }, { icon: _ctx.icon })), null, 16)) : createCommentVNode("", true),
+          ((_b = _ctx.topStartContent) == null ? void 0 : _b.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList(_ctx.topStartContent, (el) => {
+            return openBlock(), createBlock(_component_lkt_polymorphic_element, mergeProps({ ref_for: true }, el), null, 16);
+          }), 256)) : createCommentVNode("", true),
+          _ctx.icon ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 2 }, { icon: _ctx.icon })), null, 16)) : createCommentVNode("", true),
           unref(slots).text ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
-            key: 2,
+            key: 3,
             class: "lkt-header--main"
           }, {
             default: withCtx(() => [
@@ -46,17 +52,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             ]),
             _: 3
           })) : _ctx.text ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
-            key: 3,
+            key: 4,
             class: "lkt-header--main",
             innerHTML: _ctx.text
           }, null, 8, ["innerHTML"])) : createCommentVNode("", true),
-          ((_b = _ctx.topEndButtons) == null ? void 0 : _b.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 4 }, renderList(_ctx.topEndButtons, (btn) => {
+          ((_c = _ctx.topEndContent) == null ? void 0 : _c.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 5 }, renderList(_ctx.topEndContent, (el) => {
+            return openBlock(), createBlock(_component_lkt_polymorphic_element, mergeProps({ ref_for: true }, el), null, 16);
+          }), 256)) : createCommentVNode("", true),
+          ((_d = _ctx.topEndButtons) == null ? void 0 : _d.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 6 }, renderList(_ctx.topEndButtons, (btn) => {
             return openBlock(), createBlock(_component_lkt_button, mergeProps({ ref_for: true }, btn), null, 16);
           }), 256)) : createCommentVNode("", true),
-          unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 5 }) : createCommentVNode("", true)
+          unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 7 }) : createCommentVNode("", true)
         ]),
-        ((_c = _ctx.bottomButtons) == null ? void 0 : _c.length) > 0 ? (openBlock(), createElementBlock("nav", _hoisted_2, [
-          ((_d = _ctx.bottomButtons) == null ? void 0 : _d.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.bottomButtons, (btn) => {
+        ((_e = _ctx.bottomButtons) == null ? void 0 : _e.length) > 0 ? (openBlock(), createElementBlock("nav", _hoisted_2, [
+          ((_f = _ctx.bottomButtons) == null ? void 0 : _f.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.bottomButtons, (btn) => {
             return openBlock(), createBlock(_component_lkt_button, mergeProps({ ref_for: true }, btn), null, 16);
           }), 256)) : createCommentVNode("", true)
         ])) : createCommentVNode("", true)

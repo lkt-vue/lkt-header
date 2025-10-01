@@ -24,6 +24,7 @@ const computedClassName = computed(() => {
     >
         <header class="lkt-header--top">
             <lkt-button v-if="topStartButtons?.length > 0" v-for="btn in topStartButtons" v-bind="btn"/>
+            <lkt-polymorphic-element v-if="topStartContent?.length > 0" v-for="el in topStartContent" v-bind="el"/>
 
             <lkt-icon v-if="icon" v-bind="<IconConfig>{icon}"/>
             <component v-if="slots.text" :is="tag" class="lkt-header--main">
@@ -31,6 +32,7 @@ const computedClassName = computed(() => {
             </component>
             <component v-else-if="text" :is="tag" class="lkt-header--main" v-html="text"/>
 
+            <lkt-polymorphic-element v-if="topEndContent?.length > 0" v-for="el in topEndContent" v-bind="el"/>
             <lkt-button v-if="topEndButtons?.length > 0" v-for="btn in topEndButtons" v-bind="btn"/>
 
             <template v-if="slots['web-element-actions']">
