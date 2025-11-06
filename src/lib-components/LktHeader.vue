@@ -1,19 +1,37 @@
 <script setup lang="ts">
 import {computed, useSlots} from "vue";
-import {getDefaultValues, Header, HeaderConfig, IconConfig} from "lkt-vue-kernel";
+import {getDefaultValues, Header, HeaderConfig, IconConfig, IconPosition} from "lkt-vue-kernel";
 
 const slots = useSlots();
 
 const props = withDefaults(defineProps<HeaderConfig>(), getDefaultValues(Header));
 
 const computedClassName = computed(() => {
-    let r = [];
+        let r = [];
 
-    if (props.tag) r.push(`is-${props.tag}`);
-    if (props.class) r.push(props.class);
+        if (props.tag) r.push(`is-${props.tag}`);
+        if (props.class) r.push(props.class);
 
-    return r.join(' ');
-});
+        return r.join(' ');
+    }),
+    computedHasStartIcon = computed(() => {
+        if (typeof props.icon === 'object') {
+            return props.icon.position === IconPosition.Start;
+        }
+        return true;
+    }),
+    computedHasEndIcon = computed(() => {
+        if (typeof props.icon === 'object') {
+            return props.icon.position === IconPosition.End;
+        }
+        return false;
+    }),
+    computedIcon = computed(() => {
+        if (typeof props.icon === 'object') {
+            return props.icon;
+        }
+        return <IconConfig>{icon: props.icon};
+    });
 
 </script>
 
@@ -26,11 +44,12 @@ const computedClassName = computed(() => {
             <lkt-button v-if="topStartButtons?.length > 0" v-for="btn in topStartButtons" v-bind="btn"/>
             <lkt-polymorphic-element v-if="topStartContent?.length > 0" v-for="el in topStartContent" v-bind="el"/>
 
-            <lkt-icon v-if="icon" v-bind="<IconConfig>{icon}"/>
+            <lkt-icon v-if="computedHasStartIcon" v-bind="computedIcon"/>
             <component v-if="slots.text" :is="tag" class="lkt-header--main">
                 <slot name="text"/>
             </component>
             <component v-else-if="text" :is="tag" class="lkt-header--main" v-html="text"/>
+            <lkt-icon v-if="computedHasEndIcon" v-bind="computedIcon"/>
 
             <lkt-polymorphic-element v-if="topEndContent?.length > 0" v-for="el in topEndContent" v-bind="el"/>
             <lkt-button v-if="topEndButtons?.length > 0" v-for="btn in topEndButtons" v-bind="btn"/>
