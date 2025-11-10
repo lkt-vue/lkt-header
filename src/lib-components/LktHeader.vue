@@ -18,7 +18,7 @@ const computedClassName = computed(() => {
         if (typeof props.icon === 'object') {
             return props.icon.position === IconPosition.Start;
         }
-        return true;
+        return typeof props.icon !== undefined && props.icon.length > 0;
     }),
     computedHasEndIcon = computed(() => {
         if (typeof props.icon === 'object') {

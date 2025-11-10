@@ -30,7 +30,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       if (typeof props.icon === "object") {
         return props.icon.position === IconPosition.Start;
       }
-      return true;
+      return typeof props.icon !== void 0 && props.icon.length > 0;
     }), computedHasEndIcon = computed(() => {
       if (typeof props.icon === "object") {
         return props.icon.position === IconPosition.End;
