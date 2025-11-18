@@ -14,6 +14,12 @@ const computedClassName = computed(() => {
 
         return r.join(' ');
     }),
+    computedHasImage = computed(() => {
+        if (typeof props.image === 'object') {
+            return props.image.src !== '';
+        }
+        return false;
+    }),
     computedHasStartIcon = computed(() => {
         if (typeof props.icon === 'object') {
             return props.icon.position === IconPosition.Start;
@@ -41,9 +47,15 @@ const computedClassName = computed(() => {
         :class="computedClassName"
     >
         <header class="lkt-header--top">
+
+            <template v-if="slots['top-start']">
+                <slot name="top-start"/>
+            </template>
+
             <lkt-button v-if="topStartButtons?.length > 0" v-for="btn in topStartButtons" v-bind="btn"/>
             <lkt-polymorphic-element v-if="topStartContent?.length > 0" v-for="el in topStartContent" v-bind="el"/>
 
+            <lkt-image v-if="computedHasImage" v-bind="image"/>
             <lkt-icon v-if="computedHasStartIcon" v-bind="computedIcon"/>
             <component v-if="slots.text" :is="tag" class="lkt-header--main">
                 <slot name="text"/>
