@@ -2,7 +2,7 @@ import { HeaderConfig, IconConfig } from "lkt-vue-kernel";
 declare const slots: Readonly<{
     [name: string]: import("vue").Slot<any> | undefined;
 }>;
-declare const computedClassName: import("vue").ComputedRef<string>, computedHasImage: import("vue").ComputedRef<boolean>, computedHasStartIcon: import("vue").ComputedRef<boolean>, computedHasEndIcon: import("vue").ComputedRef<boolean>, computedIcon: import("vue").ComputedRef<IconConfig>;
+declare const computedClassName: import("vue").ComputedRef<string>, computedHasImage: import("vue").ComputedRef<boolean>, computedHasStartIcon: import("vue").ComputedRef<boolean>, computedHasEndIcon: import("vue").ComputedRef<boolean>, computedIcon: import("vue").ComputedRef<IconConfig>, computedText: import("vue").ComputedRef<any>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_1: {}, __VLS_23: {}, __VLS_41: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
@@ -19,6 +19,7 @@ declare const __VLS_self: import("vue").DefineComponent<HeaderConfig, {
     computedHasStartIcon: typeof computedHasStartIcon;
     computedHasEndIcon: typeof computedHasEndIcon;
     computedIcon: typeof computedIcon;
+    computedText: typeof computedText;
 }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<HeaderConfig> & Readonly<{}>, {
     image: import("lkt-vue-kernel").ImageConfig;
     text: string;

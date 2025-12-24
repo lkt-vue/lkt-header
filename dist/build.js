@@ -1,5 +1,5 @@
 import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeClass, createElementVNode, createCommentVNode, renderSlot, createBlock, unref, Fragment, renderList, mergeProps, normalizeProps, resolveDynamicComponent, withCtx } from "vue";
-import { IconPosition, getDefaultValues, Header } from "lkt-vue-kernel";
+import { IconPosition, extractI18nValue, getDefaultValues, Header } from "lkt-vue-kernel";
 const _hoisted_1 = { class: "lkt-header--top" };
 const _hoisted_2 = {
   key: 0,
@@ -47,6 +47,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         return props.icon;
       }
       return { icon: props.icon };
+    }), computedText = computed(() => {
+      return extractI18nValue(props.text);
     });
     return (_ctx, _cache) => {
       var _a, _b, _c, _d, _e, _f;
@@ -75,10 +77,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               renderSlot(_ctx.$slots, "text")
             ]),
             _: 3
-          })) : _ctx.text ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
+          })) : computedText.value ? (openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
             key: 6,
             class: "lkt-header--main",
-            innerHTML: _ctx.text
+            innerHTML: computedText.value
           }, null, 8, ["innerHTML"])) : createCommentVNode("", true),
           computedHasEndIcon.value ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 7 }, computedIcon.value)), null, 16)) : createCommentVNode("", true),
           ((_c = _ctx.topEndContent) == null ? void 0 : _c.length) > 0 ? (openBlock(true), createElementBlock(Fragment, { key: 8 }, renderList(_ctx.topEndContent, (el) => {

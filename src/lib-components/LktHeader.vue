@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, useSlots} from "vue";
-import {getDefaultValues, Header, HeaderConfig, IconConfig, IconPosition} from "lkt-vue-kernel";
+import {extractI18nValue, getDefaultValues, Header, HeaderConfig, IconConfig, IconPosition} from "lkt-vue-kernel";
 
 const slots = useSlots();
 
@@ -37,6 +37,9 @@ const computedClassName = computed(() => {
             return props.icon;
         }
         return <IconConfig>{icon: props.icon};
+    }),
+    computedText = computed(() => {
+        return extractI18nValue(props.text);
     });
 
 </script>
@@ -60,7 +63,7 @@ const computedClassName = computed(() => {
             <component v-if="slots.text" :is="tag" class="lkt-header--main">
                 <slot name="text"/>
             </component>
-            <component v-else-if="text" :is="tag" class="lkt-header--main" v-html="text"/>
+            <component v-else-if="computedText" :is="tag" class="lkt-header--main" v-html="computedText"/>
             <lkt-icon v-if="computedHasEndIcon" v-bind="computedIcon"/>
 
             <lkt-polymorphic-element v-if="topEndContent?.length > 0" v-for="el in topEndContent" v-bind="el"/>
